@@ -1,6 +1,8 @@
-from lib2to3.pgen2 import driver
 from selenium import webdriver
 
-website = 'adamchoi.co.uk/teamgoals/detailed'
-path = 'C:\dev\Python\chromedriver_win32'
+website = 'https://adamchoi.co.uk/teamgoals/detailed'
+path = '/Users/micha/Downloads/chromedriver_win32/chromedriver.exe'
 driver = webdriver.Chrome(path)
+driver.get(website)
+
+driver.quit()
