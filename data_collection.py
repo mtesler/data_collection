@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import pandas as pd
 
 website = 'https://adamchoi.co.uk/teamgoals/detailed'
 path = '/Users/micha/Downloads/chromedriver_win32/chromedriver.exe'
