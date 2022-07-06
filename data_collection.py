@@ -24,4 +24,7 @@ for match in matches:
     result.append(match.find_element('xpath', './td[3]').text)
     away_team.append(match.find_element('xpath', './td[4]').text)
 
-driver.quit()
+# driver.quit()
+
+df = pd.DataFrame({'date': date, 'home_team': home_team,
+                  'result': result, 'away_team': away_team})
