@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import pandas as pd
+import time
 
 website = 'https://adamchoi.co.uk/teamgoals/detailed'
 path = '/Users/micha/Downloads/chromedriver_win32/chromedriver.exe'
@@ -14,6 +15,8 @@ all_matches_button.click()
 
 dropdown_list_click = Select(driver.find_element(By.ID, 'country'))
 dropdown_list_click.select_by_visible_text('Spain')
+
+time.sleep(5)
 
 matches = driver.find_elements(By.TAG_NAME, 'tr')
 
