@@ -14,7 +14,14 @@ all_matches_button = driver.find_element(
 all_matches_button.click()
 
 dropdown_list_click = Select(driver.find_element(By.ID, 'country'))
-dropdown_list_click.select_by_visible_text('Spain')
+
+country = input("Please type the country name: ")
+
+if country == "":
+    print("Not a valid option.")
+    quit()
+else:
+    dropdown_list_click.select_by_visible_text(country)
 
 time.sleep(5)
 
